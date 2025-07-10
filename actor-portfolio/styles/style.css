@@ -1,0 +1,428 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Georgia', serif;
+  background-color: #0f0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+  border: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+.logo {
+  height: 24px;
+}
+nav {
+  display: flex;
+  gap: 40px;
+}
+nav a {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Mobile Header Fix */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/Profile.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('../assets/Profile.png');
+    background-position: center top;
+  }
+}
+.hero-overlay {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* HERO TEXT */
+.hero-left {
+  flex: 1;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  max-width: 600px;
+}
+.hero-text h2 {
+  color: #caa880;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #f2e6da;
+}
+.hero-text p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #ccc;
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.primary {
+  background-color: #caa880;
+  color: #fff;
+  border: none;
+}
+.secondary {
+  background-color: transparent;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    width: fit-content;
+  }
+}
+
+/* STATS */
+.stats {
+  position: absolute;
+  top: 160px;
+  right: 60px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.stats span {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .stats {
+    position: static;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+  .stats span {
+    font-size: 16px;
+  }
+}
+
+/* SOCIAL ICONS */
+.socials {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+.socials img {
+  height: 20px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.socials img:hover {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .socials {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 16px;
+  }
+  .socials img {
+    height: 16px;
+  }
+}
+
+/* FOOTER */
+footer {
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+  color: #ccc;
+}
+.footer-contact {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.info img {
+  height: 14px;
+  margin-top: 4px;
+}
+.info p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px), (max-height: 700px) {
+  footer {
+    position: static;
+    margin-top: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .info {
+    justify-content: center;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 24px;
+  color: #caa880;
+  margin-top: 110px;
+  margin-bottom: 0px; /* ⬅️ pushes it down */
+  font-style: italic;
+  opacity: 0.8;
+  animation: fadeIn 1.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/Profile2.png');
+  background-size: cover;
+  background-position: center;
+  margin-top: -30px;
+  padding: 100px 100px; /* more vertical space */
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
+  min-height: 520px; /* taller card */
+  box-shadow:
+  0 0 40px rgba(255, 203, 143, 0.341),   /* soft ambient glow */
+  0 20px 40px rgba(0, 0, 0, 0.7);      /* strong depth shadow */
+}
+
+.about-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title {
+  font-size: 64px;
+  margin-bottom: 16px;
+  color: #caa880;
+  position: absolute;
+  top: 140px; /* ⬅ Lowered from 80px to mid-card */
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  pointer-events: none; /* optional: avoids it blocking interaction */
+}
+
+
+.about-text {
+  text-align: center;
+  z-index: 3;
+  position: relative;
+  max-width: 600px;
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: 100px; /* push it to middle, leave space for friend image */
+}
+
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #caa880;
+  position: relative;
+  z-index: -1;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.about-image {
+  position: absolute;
+  width: 700px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px); /* Start far below */
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1s ease 0.5s, transform 1s ease 0.5s; /* Animate up with delay */
+}
+
+.about-card.visible .about-image {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Move to final position */
+}
+
+
+@media (max-width: 768px) {
+
+  .section-intro {
+  text-align: center;
+  font-size: 24px;
+  color: #caa880;
+  margin: 80px 0 20px;
+  font-style: italic;
+  opacity: 0.8;
+  animation: fadeIn 1.6s ease forwards;
+}
+
+
+  .about-card {
+    padding: 40px 20px;
+    min-height: 420px; /* slightly shorter card */
+    box-shadow:
+    0 0 40px rgba(255, 203, 143, 0.566),   /* soft ambient glow */
+    0 20px 40px rgba(0, 0, 0, 0.7);      /* strong depth shadow */
+  }
+
+  .about-text {
+    margin-bottom: 100px;
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .about-title {
+    font-size: 32px;
+    top: 125px; /* lowered title */
+  }
+
+  .about-image {
+    width: 150%;
+    bottom: -18px;
+    transform: translateX(-50%) translateY(100px);
+  }
+
+  .about-card.visible .about-image {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .about-title {
+    font-size: 28px;
+    top: 90px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .about-image {
+    width: 95%;
+    bottom: -5px;
+  }
+}
