@@ -1,0 +1,105 @@
+body.gallery-page {
+  background-color: #0f0d0d;
+  color: #fff;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
+}
+
+.gallery-page header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0f0d0d;
+  padding: 30px 60px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery-page nav a.active {
+  color: #caa880;
+  font-weight: bold;
+}
+
+.video-hero {
+  margin-top: 140px;
+  text-align: center;
+  color: #f2e6da;
+  padding: 40px 20px;
+}
+
+.gallery-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #caa880;
+}
+
+.gallery-sub {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 203, 143, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-card h2 {
+  font-size: 16px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Responsive Embed Container */
+.embed-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 32px;
+  }
+
+  .gallery-sub {
+    font-size: 14px;
+  }
+
+  .video-grid {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+}
