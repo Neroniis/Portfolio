@@ -5,8 +5,9 @@ body.gallery-page {
   overflow-x: hidden;
 }
 
+/* HEADER */
 .gallery-page header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,6 +25,7 @@ body.gallery-page {
   font-weight: bold;
 }
 
+/* HERO */
 .video-hero {
   margin-top: 140px;
   text-align: center;
@@ -42,10 +44,11 @@ body.gallery-page {
   color: #ccc;
 }
 
+/* VIDEO GRID */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  gap: 60px; /* 🔧 más aire entre videos */
   padding: 60px;
   max-width: 1200px;
   margin: 0 auto;
@@ -64,14 +67,15 @@ body.gallery-page {
 }
 
 .video-card h2 {
-  font-size: 16px;
-  padding: 16px;
+  font-size: 18px; /* 🔧 más grande para títulos */
+  margin-top: 20px; /* 🔧 separación del vídeo */
+  margin-bottom: 16px;
   color: #fff;
   text-align: center;
   font-weight: 400;
 }
 
-/* Responsive Embed Container */
+/* EMBED CONTAINER */
 .embed-container {
   position: relative;
   width: 100%;
@@ -89,6 +93,57 @@ body.gallery-page {
   border: none;
 }
 
+.gallery-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ccc;
+  background: transparent;
+}
+
+.gallery-footer .contact-info {
+  max-width: 100%;
+}
+
+.gallery-footer .contact-info p {
+  margin: 6px 0;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: center;
+}
+
+.gallery-footer a {
+  color: #caa880;
+  text-decoration: none;
+}
+
+.gallery-footer a:hover {
+  text-decoration: underline;
+}
+
+.gallery-footer .copyright {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+body.gallery-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.gallery-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MOBILE ADAPTATION */
 @media (max-width: 768px) {
   .gallery-title {
     font-size: 32px;
@@ -100,6 +155,12 @@ body.gallery-page {
 
   .video-grid {
     padding: 30px 20px;
-    gap: 20px;
+    gap: 30px; /* 🔧 más espacio entre bloques en móviles */
+  }
+
+  .video-card h2 {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 12px;
   }
 }
