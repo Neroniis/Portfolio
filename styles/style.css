@@ -84,15 +84,15 @@ nav a {
 @media (max-width: 768px) {
   .hero {
     background-image: url('../assets/Profile.png');
-    background-position: center top;
+    padding: 0 130px;
   }
 }
 .hero-overlay {
-  width: 100%;
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 20px;
   box-sizing: border-box;
   position: relative;
   flex-wrap: wrap;
@@ -170,7 +170,8 @@ nav a {
     margin-top: 20px;
     text-align: left;
     font-size: 12px;
-    padding: 0 20px;
+    padding: 0 100px;
+    
   }
   .stats span {
     font-size: 16px;
@@ -202,7 +203,8 @@ nav a {
     gap: 16px;
   }
   .socials img {
-    height: 16px;
+    height: 64px;
+    filter: brightness(0) invert(1);
   }
 }
 
@@ -373,14 +375,14 @@ footer {
 
 .friend-cutout {
   position: absolute;
-  top: 100px;
-  bottom: 0px;
+  top: -10px;
+  bottom: 120px;
   left: 50%;
   transform: translateX(-50%) translateY(120px) scale(1.4);
   width: auto;
   pointer-events: none;
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
@@ -405,11 +407,27 @@ footer {
 }
 
 .about-text {
-  text-align: center;
+  text-align: left;
   max-width: 600px;
+  height: 280px; /* o el alto que veas que queda guapo */
+  overflow-y: auto;
   color: #fff;
   margin: 0 auto 40px;
+  padding-right: 10px;
   z-index: 3;
+}
+
+.about-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-text::-webkit-scrollbar-thumb {
+  background: #caa880;
+  border-radius: 3px;
+}
+
+.about-text::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .about-text h2 {
@@ -425,6 +443,8 @@ footer {
 
 .about-image {
   margin-top: 40px;
+  height: 200px; /* Asegura espacio para el cutout */
+  position: relative;
 }
 
 .about-image img {
@@ -433,34 +453,91 @@ footer {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .about-card {
-    padding: 140px 100px 200px 100px;
-  }
-
-  .about-title {
-    font-size: 32px;
-  }
-
-  .about-text p {
-    font-size: 15px;
-  }
-
-  .about-image img {
-    max-width: 100%;
-  }
+.card-video-gallery {
+  background-image: url('../assets/videogallery.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  backdrop-filter: none;
+  position: relative;
 }
 
-@media (max-width: 400px) {
+.card-video-gallery::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* si quieres oscurecer */
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.card-video-gallery > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-video-gallery .about-title,
+.card-video-gallery .about-text {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card-video-gallery .about-text .btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  margin-top: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    width: 90%;          /* shrink width */
+    max-width: 380px;    /* optional cap */
+    min-height: 450px; /* ✅ add this instead */
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    overflow: visible; /* important */
+  }
+
   .about-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .about-text p {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  .carousel-arrow.left {
+    left: -0px;
+  }
+
+  .carousel-arrow.right {
+    right: -0px;
+  }
+
+  .about-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   .about-image img {
-    max-width: 95%;
+    max-width: 90%;
+    padding-top: 80px;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
+
+
 }
