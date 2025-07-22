@@ -4,22 +4,44 @@ body.contact-page {
   color: #fff;
   font-family: 'Georgia', serif;
   overflow-x: hidden;
-  padding-top: 140px;
+  padding-top: 120px; /* necesario para no tapar el contenido */
+}
+
+/* === HEADER WRAPPER === */
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-inner nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 /* === HEADER === */
 .contact-page header {
   background: #0f0d0d;
-  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box; /* asegura que el padding no haga overflow */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .contact-page .logo {
   height: 36px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 nav a {

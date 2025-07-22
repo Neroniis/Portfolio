@@ -4,82 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Currículum – David Soriano</title>
-  <link rel="stylesheet" href="styles/cv.css" />
+  <link rel="stylesheet" href="styles/cv.css?v=3" />
 </head>
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <a href="index.html#about">Sobre Mí</a>
-      <a href="gallery.html" class="active">Videobook</a>
-      <a href="contact.html">Contáctame</a>
-      <a href="cv.html" class="btn-cv">CV</a>
-    </nav>
-  </header>
 <body>
-  <header>
+
+  <!-- HEADER -->
+  <header class="cv-header">
+    <img src="assets/icons/logo.png" alt="Logo" class="logo" />
     <h1>David Soriano</h1>
     <p>Actor de cine, televisión y teatro</p>
+    <nav class="cv-nav">
+      <a href="index.html#about">Sobre Mí</a>
+      <a href="gallery.html">Galería de Videos y Fotos</a>
+      <a href="contact.html">Contáctame</a>
+      <a href="cv.html" class="active btn-cv">CV</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="section">
-      <h2>Experiencia – Televisión</h2>
-      <ul>
-        <li>"SIN HUELLAS" – Reparto – Amazon Prime — 2022</li>
-        <li>"ENERGY SYSTEM" – Protagonista – Spot — 2018</li>
-        <li>"SAVE ME" – Protagonista – Videoclip — 2016</li>
-        <li>"LOTERÍA DE NAVIDAD" – Protagonista — 2013</li>
-        <li>"AMAR ES PARA SIEMPRE" – Reparto – Antena 3 — 2013</li>
-        <li>"PRINCESA ROTA" – Reparto — 2012</li>
-      </ul>
+  <main class="cv-container">
+    <section class="cv-intro">
+
+      <div class="cv-photos-top">
+        <img src="assets/photos/portrait2.jpeg" alt="Retrato David" />
+        <img src="assets/photos/acting2.jpg" alt="David en rodaje" />
+      </div>
+
+      <div class="cv-downloads">
+        <a href="assets/David_Soriano_CV.pdf" target="_blank" class="cv-download">📄 Ver CV en Inglés</a>
+        <a href="assets/David_Soriano_CV_ES.pdf" target="_blank" class="cv-download">📄 Ver CV en Español</a>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Experiencia – Cine</h2>
-      <ul>
-        <li>"HALLOWEEN GAMES" – Protagonista – 2023</li>
-        <li>"9 BARES" – Reparto – 2016</li>
-        <li>"LOS CHICOS DEL LLAVERO" – Protagonista – 2015</li>
-        <li>"MATAR EL TIEMPO" – Reparto – 2014</li>
-        <li>"CHICO CONOCE A CHICA" – Protagonista – 2014</li>
-        <li>"CENIZAS" – Protagonista – 2014</li>
-        <li>"¿ESTÁS SEGURO?" – Protagonista – 2014</li>
-      </ul>
-    </section>
+    <section class="cv-content">
+      <div class="cv-text centered" >
+        <section class="section">
+          <h2>Experiencia – Televisión</h2>
+          <ul>
+            <li>"SIN HUELLAS" – Reparto – Amazon Prime — 2022</li>
+            <li>"ENERGY SYSTEM" – Protagonista – Spot — 2018</li>
+            <li>"SAVE ME" – Protagonista – Videoclip — 2016</li>
+            <li>"LOTERÍA DE NAVIDAD" – Protagonista — 2013</li>
+            <li>"AMAR ES PARA SIEMPRE" – Reparto – Antena 3 — 2013</li>
+            <li>"PRINCESA ROTA" – Reparto — 2012</li>
+          </ul>
+        </section>
 
-    <section class="section">
-      <h2>Teatro</h2>
-      <ul>
-        <li>"THOR LOVE & THUNDER" – Protagonista – 2022</li>
-        <li>"ANIMALES FANTÁSTICOS 3" – Protagonista – 2022</li>
-        <li>"SPIDER-MAN: NO WAY HOME" – Protagonista – 2021</li>
-        <li>"TREPLEV" – Protagonista – 2014</li>
-        <li>"AIDA" – Reparto – 2011</li>
-      </ul>
-    </section>
+        <section class="section">
+          <h2>Experiencia – Cine</h2>
+          <ul>
+            <li>"HALLOWEEN GAMES" – Protagonista – 2023</li>
+            <li>"9 BARES" – Reparto – 2016</li>
+            <li>"LOS CHICOS DEL LLAVERO" – Protagonista – 2015</li>
+            <li>"MATAR EL TIEMPO" – Reparto – 2014</li>
+            <li>"CHICO CONOCE A CHICA" – Protagonista – 2014</li>
+            <li>"CENIZAS" – Protagonista – 2014</li>
+            <li>"¿ESTÁS SEGURO?" – Protagonista – 2014</li>
+          </ul>
+        </section>
 
-    <section class="section">
-      <h2>Formación</h2>
-      <ul>
-        <li>2023 – Seminario Módulo 3 – Fernando Piernas</li>
-        <li>2022 – Seminario Módulo 2 – Fernando Piernas</li>
-        <li>2020-2021 – Seminario Módulo 1 – Fernando Piernas</li>
-        <li>2014-2015 – Estudio Corazza</li>
-        <li>2012-2013 – Especialista Acción – Antorcha Humana</li>
-        <li>2011-2014 – Diploma Interpretación – Instituto Cine de Madrid</li>
-        <li>2010-2011 – Instrucción Actoral – Ciudad de la Luz</li>
-      </ul>
-    </section>
+        <section class="section">
+          <h2>Teatro</h2>
+          <ul>
+            <li>"THOR LOVE & THUNDER" – Protagonista – 2022</li>
+            <li>"ANIMALES FANTÁSTICOS 3" – Protagonista – 2022</li>
+            <li>"SPIDER-MAN: NO WAY HOME" – Protagonista – 2021</li>
+            <li>"TREPLEV" – Protagonista – 2014</li>
+            <li>"AIDA" – Reparto – 2011</li>
+          </ul>
+        </section>
 
-    <section class="section">
-      <h2>Información Personal</h2>
-      <p>Idiomas: Español nativo / Inglés intermedio-avanzado</p>
-      <p>Altura: 1.76m | Peso: 75kg</p>
-      <p>Color de pelo: Castaño claro | Ojos: Verdes</p>
-      <p><a href="https://www.imdb.com/es-es/name/nm5211500/" target="_blank">IMDb Profile</a></p>
-      <p>Email: <a href="mailto:davidsorianoactor@gmail.com">davidsorianoactor@gmail.com</a></p>
-      <p>Ubicación: Londres</p>
+        <section class="section">
+          <h2>Formación</h2>
+          <ul>
+            <li>2023 – Seminario Módulo 3 – Fernando Piernas</li>
+            <li>2022 – Seminario Módulo 2 – Fernando Piernas</li>
+            <li>2020-2021 – Seminario Módulo 1 – Fernando Piernas</li>
+            <li>2014-2015 – Estudio Corazza</li>
+            <li>2012-2013 – Especialista Acción – Antorcha Humana</li>
+            <li>2011-2014 – Diploma Interpretación – Instituto Cine de Madrid</li>
+            <li>2010-2011 – Instrucción Actoral – Ciudad de la Luz</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Información Personal</h2>
+          <p>Idiomas: Español nativo / Inglés intermedio-avanzado</p>
+          <p>Altura: 1.76m | Peso: 75kg</p>
+          <p>Color de pelo: Castaño claro | Ojos: Verdes</p>
+          <p><a href="https://www.imdb.com/es-es/name/nm5211500/" target="_blank">IMDb Profile</a></p>
+          <p>Email: <a href="mailto:davidsorianoactor@gmail.com">davidsorianoactor@gmail.com</a></p>
+          <p>Ubicación: Madrid</p>
+        </section>
+      </div>
     </section>
   </main>
+
 </body>
 </html>

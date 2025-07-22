@@ -3,6 +3,9 @@ body.gallery-page {
   color: #fff;
   font-family: 'Georgia', serif;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* HEADER */
@@ -48,7 +51,7 @@ body.gallery-page {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 60px; /* 🔧 más aire entre videos */
+  gap: 60px;
   padding: 60px;
   max-width: 1200px;
   margin: 0 auto;
@@ -67,8 +70,8 @@ body.gallery-page {
 }
 
 .video-card h2 {
-  font-size: 18px; /* 🔧 más grande para títulos */
-  margin-top: 20px; /* 🔧 separación del vídeo */
+  font-size: 18px;
+  margin-top: 20px;
   margin-bottom: 16px;
   color: #fff;
   text-align: center;
@@ -79,7 +82,7 @@ body.gallery-page {
 .embed-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -93,12 +96,57 @@ body.gallery-page {
   border: none;
 }
 
+/* PHOTO GALLERY SECTION */
+.photo-gallery {
+  margin: 60px auto 80px auto;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.photo-gallery h2 {
+  font-size: 30px;
+  color: #caa880;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #caa88044;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.photo-gallery .gallery-sub {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.photo-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* FOOTER */
 .gallery-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: auto;
   padding: 40px 20px;
   text-align: center;
   color: #ccc;
@@ -131,19 +179,7 @@ body.gallery-page {
   color: #888;
 }
 
-body.gallery-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.gallery-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* MOBILE ADAPTATION */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .gallery-title {
     font-size: 32px;
@@ -155,12 +191,16 @@ body.gallery-page {
 
   .video-grid {
     padding: 30px 20px;
-    gap: 30px; /* 🔧 más espacio entre bloques en móviles */
+    gap: 30px;
   }
 
   .video-card h2 {
     font-size: 16px;
     margin-top: 16px;
     margin-bottom: 12px;
+  }
+
+  .photo-gallery {
+    padding: 0 20px;
   }
 }
