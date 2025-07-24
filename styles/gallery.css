@@ -216,6 +216,9 @@ body.gallery-page {
 .modal-content {
   max-width: 90vw;
   max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border-radius: 16px;
   box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
