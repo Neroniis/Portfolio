@@ -260,9 +260,13 @@ body.lightbox-active {
   cursor: zoom-out;
   max-width: 90vw;
   max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   opacity: 0;
   pointer-events: none;
 }
+
 .lightbox-image.active {
   opacity: 1;
   pointer-events: auto;
